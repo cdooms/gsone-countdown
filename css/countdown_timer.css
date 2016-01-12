@@ -11,13 +11,36 @@
 
 .countdown-container {
   color: #FFFFFF;
+  height: 54px;
   display: table-cell;
   vertical-align: middle;
 }
 
-.days,
-.hours,
-.minutes {
-  border-right: 1px solid #FFF;
+.countdown-part {
+  border-right: 2px solid #FFF;
+  display: inline-block;
+  font-size: 44px;
+  line-height: 88px;
+  font-weight: normal;
+  margin: 36px;
+  padding-right: 72px;
 }
+
+.countdown-part > span {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.countdown-part.seconds {
+  border-right: 0;
+  padding-right: 0;
+}
+
+.countdown-part > span.number {
+  font-size: 122px;
+  font-weight: bold;
+  margin-bottom: 48px;
+}
+
 

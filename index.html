@@ -33,10 +33,10 @@
     var days = (weekdays + parseInt(event.strftime('%-d')));
 
     var $this = $(this).html(event.strftime(''
-      + '<span class="days">' + days + '</span>'
-      + '<span class="hours">%H</span>'
-      + '<span class="minutes">%M</span>'
-      + '<span class="seconds">%S</span>'));
+      + '<div class="countdown-part"><span class="number">' + days + '</span><span>Days</span></div>'
+      + '<div class="countdown-part"><span class="number">%H</span><span>Hours</span></div>'
+      + '<div class="countdown-part"><span class="number">%M</span><span>Mins</span></div>'
+      + '<div class="countdown-part seconds"><span class="number">%S</span><span>Secs</span></div>'));
   });
 </script>
 
