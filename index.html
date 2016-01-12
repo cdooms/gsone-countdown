@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>GS1 Countdown Timer</title>
+  <meta name="description" content="GS1 Countdown Timer">
+  <meta name="author" content="SitePoint">
+
+  <script type="text/javascript" src="js/jquery-2.0.3.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+  <script type="text/javascript" src="bower_components/jquery.countdown/dist/jquery.countdown.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/countdown_timer.css" />
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body class="toolkit">
+  <div class="container bg-raspberry">
+    <div id="countdown-timer" class="countdown-container"></div>
+  </div>
+
+<script>
+  $('#countdown-timer').countdown('2016/05/06 09:57:00').on('update.countdown', function(event) {
+    var weeks = event.strftime('%-w');
+    var weekdays = (weeks * 7);
+    var days = (weekdays + parseInt(event.strftime('%-d')));
+
+    var $this = $(this).html(event.strftime(''
+      + '<span class="days">' + days + '</span>'
+      + '<span class="hours">%H</span>'
+      + '<span class="minutes">%M</span>'
+      + '<span class="seconds">%S</span>'));
+  });
+</script>
+
+</body>
+</html>
+

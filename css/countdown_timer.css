@@ -1,0 +1,23 @@
+.toolkit {
+  margin: 0;
+}
+
+.container {
+  display: table;
+  min-height: 1080px;
+  text-align: center;
+  width: 100%;
+}
+
+.countdown-container {
+  color: #FFFFFF;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.days,
+.hours,
+.minutes {
+  border-right: 1px solid #FFF;
+}
+
